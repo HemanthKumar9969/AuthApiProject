@@ -1,9 +1,6 @@
 ## User Authentication & Authorization API (ASP.NET Core + JWT)
 
-
 A secure and scalable Authentication & Authorization REST API built with ASP.NET Core 8 Web API. It enables modern applications to register users, authenticate via JWT tokens, and authorize access to protected endpoints — all while following security best practices.
-
- ## Perfect for integrating as a backend for your web or mobile apps, this API uses Entity Framework Core, MS SQL Server, and BCrypt for secure and stateless user authentication.
 
 ## Features:
 
