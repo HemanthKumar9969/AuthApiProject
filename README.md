@@ -75,17 +75,35 @@ Ensure the following tools are installed:
 5: Thunder Client (VS Code extension for testing APIs)
 
 ## Setup Instructions
-Clone the Repository:
+1: Clone the Repository:
 
 git clone https://github.com/HemanthKumar9969/AuthApiProject.git
 
 cd AuthApiProject/AuthApi
 
-Restore NuGet Packages:
+2: Restore NuGet Packages:
+
 dotnet restore
 
-Configure appsettings.Development.json:
+3: Configure appsettings.Development.json:
+
 Create a file named appsettings.Development.json in the AuthApi project folder (same location as appsettings.json).
 Add your configuration details:
 
 ![image](https://github.com/user-attachments/assets/bbf3b563-7f7a-4977-a256-500bdb83a6f7)
+
+4️: Apply Database Migrations:
+
+dotnet ef database update
+
+5️: Run the Application: 
+
+dotnet run
+
+The API will be available at:
+
+https://localhost:5001/swagger
+
+![Screenshot (198)](https://github.com/user-attachments/assets/0530b149-0036-4bcf-8a35-208b58334475)
+
+
