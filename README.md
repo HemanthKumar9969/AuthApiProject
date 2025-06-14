@@ -65,6 +65,6 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 
 2: Run the application:
 
-## dotnet run 
+dotnet run 
 
 3: Your browser should automatically open to http://localhost:5285/swagger, which is the Swagger UI for testing.
