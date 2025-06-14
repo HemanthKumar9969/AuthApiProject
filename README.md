@@ -74,3 +74,7 @@ Ensure the following tools are installed:
 
 5: Thunder Client (VS Code extension for testing APIs)
 
+## Setup Instructions
+1️: Clone the Repository:
+git clone https://github.com/HemanthKumar9969/AuthApiProject.git
+cd AuthApiProject/AuthApi
