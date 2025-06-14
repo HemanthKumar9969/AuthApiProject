@@ -5,7 +5,9 @@
 This project is a secure and scalable ASP.NET Core Web API that provides foundational user authentication and authorization for modern applications. It supports:
 
 1: User registration with encrypted credentials (using BCrypt)
+
 2: JWT-based login for stateless authentication
+
 3: Access control to protected API endpoints via token validation
 
 Built with Entity Framework Core and MS SQL Server, it ensures robust data persistence. The API follows security best practices with centralized configuration and integrates Swagger UI for interactive API documentation and easy testing.
