@@ -60,42 +60,28 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 
 ## Getting Started
 
-## Follow these steps to set up and run the project locally.
-
 ### Prerequisites
-### .NET SDK (8.0+): Download here
-### Visual Studio Code: With the C# extension (from Microsoft).
+
+## .NET SDK (8.0+):
+## Visual Studio Code: With the C# extension.
 ## MS SQL Server 2022: (or compatible version) running locally.
 ## SQL Server Management Studio (SSMS) or Azure Data Studio: For database management.
 ## Thunder Client: VS Code Extension for API testing.
 
-## Setup Instructions
+## Setup Instructions Below:
 
 ## Clone the Repository:
-
 git clone https://github.com/HemanthKumar9969/AuthApiProject.git
-
 cd AuthApiProject/AuthApi
-
 ## Restore NuGet Packages:
-
 dotnet restore
-
 ## Configure appsettings.Development.json:
-
-1: Create a new file named appsettings.Development.json inside the AuthApi folder (next to appsettings.json).
-
-2: Add your actual SQL Server credentials and a newly generated, strong JWT secret key to this file.
-
-
+Create a new file named appsettings.Development.json inside the AuthApi folder (next to appsettings.json).
+Add your actual SQL Server credentials and a newly generated, strong JWT secret key to this file.
 ## Database Migrations:
-
 dotnet ef database update
-
-1: This command will create the AuthDb database and Users table in your SQL Server instance.
-
+This command will create the AuthDb database and Users table in your SQL Server instance.
 ## Running the Application:
 In your terminal, navigate to the AuthApi project folder (AuthApiProject/AuthApi).
-
 ## Run the application:
 dotnet run
