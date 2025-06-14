@@ -118,20 +118,19 @@ Objective: Create a new user account.
 Request Setup:
 
 1: Method: Change the dropdown from GET to POST.
-2: URL: Enter http://localhost:5285/api/Auth/register (or https://localhost:7208/api/Auth/register if you're using HTTPS).
-3: Headers Tab:
-3: Add a new header:
-4: Name: Content-Type
-5: Value: application/json
-6: Body Tab:
-7: Select JSON from the dropdown.
-8: Paste the following JSON into the text area:
 
-{
-  "username": "thunderuser",
-  "email": "thunder@example.com",
-  "password": "ThunderPassword123!"
-}
+2: URL: Enter http://localhost:5285/api/Auth/register
+
+3: Headers Tab:
+
+4: Add a new header:
+Name: Content-Type
+Value: application/json
+
+5: Body Tab:
+Select JSON from the dropdown.
+Paste the following JSON into the text area:
+
 
 You can change these values.
 Send Request: Click the Send button (green play icon).
