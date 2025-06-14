@@ -55,3 +55,4 @@ A secure and scalable Authentication & Authorization REST API built with ASP.NET
   
 - API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia.
 
+## Project Structure and File Overview:
