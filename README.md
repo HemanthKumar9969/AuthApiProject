@@ -129,12 +129,16 @@ Value: application/json
 
 5: Body Tab:
 Select JSON from the dropdown.
-Paste the following JSON into the text area:
+
+![Screenshot (200)](https://github.com/user-attachments/assets/dd247761-27f8-427d-b09a-8a3a271b6399)
 
 
 You can change these values.
+
 Send Request: Click the Send button (green play icon).
-Expected Response:
-Status: 200 OK
+
+Expected Response: Status: 200 OK
+
 Response Body: "Registration successful!"
+
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
