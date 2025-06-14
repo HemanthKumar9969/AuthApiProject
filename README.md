@@ -76,5 +76,7 @@ Ensure the following tools are installed:
 
 ## Setup Instructions
 1️: Clone the Repository:
+
 git clone https://github.com/HemanthKumar9969/AuthApiProject.git
+
 cd AuthApiProject/AuthApi
