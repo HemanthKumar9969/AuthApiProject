@@ -1,55 +1,42 @@
-## User Authentication & Authorization API (ASP.NET Core + JWT)
+## User Authentication & Authorization API with JWT
 
-A secure and scalable Authentication & Authorization REST API built with ASP.NET Core 8 Web API. It enables modern applications to register users, authenticate via JWT tokens, and authorize access to protected endpoints — all while following security best practices.
+## Project Overview
 
-## Features:
+This project delivers a secure and robust Backend API built on ASP.NET Core Web API, designed to serve as the foundational authentication and authorization layer for modern applications. It meticulously handles critical user security processes, enabling clients to:
+1: Register new user accounts with encrypted credentials.
+2:Authenticate and log in, receiving a secure JSON Web Token (JWT) for subsequent interactions.
+3:Access protected resources by presenting a valid JWT, ensuring only authenticated users can interact with sensitive API endpoints.
 
-1: JWT-Based Login:
+The architecture emphasizes **stateless authentication **through JWTs, employs BCrypt for industry-standard password hashing, and integrates seamlessly with MS SQL Server for reliable data persistence via Entity Framework Core. Adhering to best practices, the API includes secure configuration management and clear, interactive documentation via Swagger UI, facilitating easy development and testing.
 
-- Authenticates users and returns a signed JSON Web Token (JWT).
+Key Features
+🔐 Secure User Registration: Implements a robust registration process that includes password hashing with unique salts (using BCrypt) to protect user credentials against common attack vectors like rainbow tables and brute-force attempts.
 
-- Stateless and scalable authentication mechanism.
-  
-2: Secure Registration:
+🔑 JWT-Based Authentication: Provides a streamlined login mechanism where successful authentication results in the issuance of a short-lived JSON Web Token, used by clients to establish authenticated sessions without relying on server-side session state.
 
-- Passwords hashed using BCrypt.Net-Next with unique salts.
+🛡️ Endpoint Protection: Ensures that critical API endpoints are protected, verifying the authenticity and validity of every incoming JWT to restrict access solely to authorized users.
 
-- Defends against rainbow tables and brute-force attacks.
+👥 Role-Based Authorization (RBAC): Enables granular control over API access by assigning specific roles (e.g., User, Admin) to users, allowing different endpoints or functionalities to be restricted based on the authenticated user's permissions.
 
-3: Protected Endpoints:
+🔒 Password Security Best Practices: Leverages BCrypt's adaptive hashing to store passwords, making them computationally expensive to crack and highly resistant to offline attacks.
 
-- Middleware validates incoming JWTs.
-  
-- Restricts access to authorized users only.
+⚙️ Centralized Configuration: Manages sensitive information, such as database connection strings and the JWT signing secret, securely through ASP.NET Core's configuration system, utilizing environment-specific files (appsettings.Development.json) to prevent credentials from being exposed in source control.
 
-4: Role-Based Authorization (RBAC):
+📄 Interactive API Documentation: Integrates Swagger UI to provide a live, interactive documentation portal for all API endpoints, significantly aiding developers in understanding, testing, and integrating with the API during development.
 
-- Role support (e.g., User, Admin).
-  
-- Fine-grained access control based on roles.
+Technologies Used
+Backend Framework: ASP.NET Core 8.0 Web API (compatible with .NET SDK 8.0+)
 
-5: Secure Password Practices:
+Database: MS SQL Server 2022
 
-- Uses BCrypt's adaptive hash function.
-  
-- Resistant to offline cracking attempts.
+ORM (Object-Relational Mapper): Entity Framework Core 8.0+
 
-## Technologies Used:
+Password Hashing Library: BCrypt.Net-Next
 
-- Backend Framework: ASP.NET Core 8.0 Web API (compatible with .NET SDK 8.0+).
-  
-- Database: MS SQL Server 2022.
-  
-- ORM (Object-Relational Mapper): Entity Framework Core 8.0+.
-  
-- Password Hashing Library: BCrypt.Net-Next.
-  
-- Authentication & Authorization Standard: JSON Web Tokens (JWT).
-  
-- API Documentation Tool: Swashbuckle.AspNetCore (for Swagger UI generation).
-  
-- Development Environment: Visual Studio Code 2022.
-  
-- API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia.
+Authentication & Authorization Standard: JSON Web Tokens (JWT)
 
+API Documentation Tool: Swashbuckle.AspNetCore (for Swagger UI generation)
 
+Development Environment: Visual Studio Code 2022
+
+API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia
