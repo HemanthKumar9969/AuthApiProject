@@ -80,3 +80,12 @@ Clone the Repository:
 git clone https://github.com/HemanthKumar9969/AuthApiProject.git
 
 cd AuthApiProject/AuthApi
+
+Restore NuGet Packages:
+dotnet restore
+
+Configure appsettings.Development.json:
+Create a file named appsettings.Development.json in the AuthApi project folder (same location as appsettings.json).
+Add your configuration details:
+
+![image](https://github.com/user-attachments/assets/bbf3b563-7f7a-4977-a256-500bdb83a6f7)
