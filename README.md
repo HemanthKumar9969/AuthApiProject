@@ -106,4 +106,32 @@ https://localhost:5001/swagger
 
 ![Screenshot (198)](https://github.com/user-attachments/assets/0530b149-0036-4bcf-8a35-208b58334475)
 
+## API Endpoints and Testing:
+### Testing the API with Thunder Client (Step-by-Step)
 
+All API endpoints are hosted at http://localhost:5285. We'll use Thunder Client for testing.
+
+## Test 1: User Registration
+
+Objective: Create a new user account in your database.
+
+Request Setup:
+Method: Select POST.
+URL: http://localhost:5285/api/Auth/register
+Headers Tab: Add Content-Type: application/json.
+Body Tab: Select JSON and paste:
+
+{
+  "username": "mytestuser",
+  "email": "mytest@example.com",
+  "password": "MyStrongPassword123!"
+}
+
+
+Send Request: Click Send.
+
+Expected Response:
+
+Status: 200 OK
+Body: "Registration successful!"
+Note: If you retry with the same username/email, you'll get 400 Bad Request as expected.
