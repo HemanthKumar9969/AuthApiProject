@@ -58,13 +58,44 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 
 5: Thunder Client: VS Code Extension for API testing.
 
+## Getting Started
+
+## Follow these steps to set up and run the project locally.
+
+### Prerequisites
+### .NET SDK (8.0+): Download here
+### Visual Studio Code: With the C# extension (from Microsoft).
+## MS SQL Server 2022: (or compatible version) running locally.
+## SQL Server Management Studio (SSMS) or Azure Data Studio: For database management.
+## Thunder Client: VS Code Extension for API testing.
+
+## Setup Instructions
+
+## Clone the Repository:
+
+git clone https://github.com/HemanthKumar9969/AuthApiProject.git
+
+cd AuthApiProject/AuthApi
+
+## Restore NuGet Packages:
+
+dotnet restore
+
+## Configure appsettings.Development.json:
+
+1: Create a new file named appsettings.Development.json inside the AuthApi folder (next to appsettings.json).
+
+2: Add your actual SQL Server credentials and a newly generated, strong JWT secret key to this file.
+
+
+## Database Migrations:
+
+dotnet ef database update
+
+1: This command will create the AuthDb database and Users table in your SQL Server instance.
 
 ## Running the Application:
+In your terminal, navigate to the AuthApi project folder (AuthApiProject/AuthApi).
 
-1: In your terminal, navigate to the AuthApi project folder (AuthApiProject/AuthApi).
-
-2: Run the application:
-
-dotnet run 
-
-3: Your browser should automatically open to http://localhost:5285/swagger, which is the Swagger UI for testing.
+## Run the application:
+dotnet run
