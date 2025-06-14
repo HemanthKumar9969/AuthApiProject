@@ -53,5 +53,5 @@ A secure and scalable Authentication & Authorization REST API built with ASP.NET
   
 - Development Environment: Visual Studio Code 2022.
   
--API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia.
+- API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia.
 
