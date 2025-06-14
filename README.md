@@ -1,6 +1,6 @@
-## User Authentication & Authorization API with JWT
+## User Authentication & Authorization API with JWT ##
 
-## Project Overview
+## Project Overview:
 
 This project is a secure and scalable ASP.NET Core Web API that provides foundational user authentication and authorization for modern applications. It supports:
 
@@ -12,7 +12,8 @@ This project is a secure and scalable ASP.NET Core Web API that provides foundat
 
 Built with Entity Framework Core and MS SQL Server, it ensures robust data persistence. The API follows security best practices with centralized configuration and integrates Swagger UI for interactive API documentation and easy testing.
 
-## Key Features
+## Key Features:
+
 1: Secure User Registration: Implements a robust registration process that includes password hashing with unique salts (using BCrypt) to protect user credentials against common attack vectors like rainbow tables and brute-force attempts.
 
 2: JWT-Based Authentication: Provides a streamlined login mechanism where successful authentication results in the issuance of a short-lived JSON Web Token, used by clients to establish authenticated sessions without relying on server-side session state.
@@ -27,7 +28,8 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 
 7: Interactive API Documentation: Integrates Swagger UI to provide a live, interactive documentation portal for all API endpoints, significantly aiding developers in understanding, testing, and integrating with the API during development.
 
-## Technologies Used
+## Technologies Used:
+
 1: Backend Framework: ASP.NET Core 8.0 Web API (compatible with .NET SDK 8.0+)
 
 2: Database: MS SQL Server 2022
@@ -43,3 +45,62 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 6: Development Environment: Visual Studio Code 2022
 
 7: API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia
+
+## Prerequisites: 
+
+1: .NET SDK (8.0+): Download here
+
+2: Visual Studio Code: With the C# extension (from Microsoft).
+
+3: MS SQL Server 2022: (or compatible version) running locally.
+
+4: SQL Server Management Studio (SSMS) or Azure Data Studio: For database management.
+
+5: Thunder Client: VS Code Extension for API testing.
+
+## Setup Instructions
+
+# Clone the Repository:
+
+git clone https://github.com/HemanthKumar9969/AuthApiProject.git
+
+cd AuthApiProject/AuthApi
+
+## Restore NuGet Packages:
+
+dotnet restore
+
+## Configure appsettings.Development.json:
+
+1: Create a new file named appsettings.Development.json inside the AuthApi folder (next to appsettings.json).
+
+2: Add your actual SQL Server credentials and a newly generated, strong JWT secret key to this file.
+
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=NALADALA\\SQLEXPRESS;Database=AuthDb;User Id=sa;Password=9969;TrustServerCertificate=True;"
+  },
+  "JwtSettings": {
+    "Secret": "YOUR_UNIQUE_AND_STRONG_JWT_SECRET_KEY_HERE_MIN_32_BYTES_LONG",
+    "Issuer": "https://yourdomain.com",  // Update to your API's actual domain
+    "Audience": "https://yourclientapp.com" // Update to your client application's actual domain
+  }
+}
+
+(To generate a strong JWT secret, you can use a temporary C# console app with System.Security.Cryptography.RNGCryptoServiceProvider and Convert.ToBase64String.)
+
+## Database Migrations:
+
+dotnet ef database update
+
+This command will create the AuthDb database and Users table in your SQL Server instance.
+
+## Running the Application:
+
+1: In your terminal, navigate to the AuthApi project folder (AuthApiProject/AuthApi).
+
+2: Run the application:
+
+dotnet run
+
+3: Your browser should automatically open to http://localhost:5285/swagger, which is the Swagger UI for testing.
