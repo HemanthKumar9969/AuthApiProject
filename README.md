@@ -113,25 +113,29 @@ All API endpoints are hosted at http://localhost:5285. We'll use Thunder Client 
 
 ## Test 1: User Registration
 
-Objective: Create a new user account in your database.
+Objective: Create a new user account.
 
 Request Setup:
-Method: Select POST.
-URL: http://localhost:5285/api/Auth/register
-Headers Tab: Add Content-Type: application/json.
-Body Tab: Select JSON and paste:
+
+1: Method: Change the dropdown from GET to POST.
+2: URL: Enter http://localhost:5285/api/Auth/register (or https://localhost:7208/api/Auth/register if you're using HTTPS).
+3: Headers Tab:
+3: Add a new header:
+4: Name: Content-Type
+5: Value: application/json
+6: Body Tab:
+7: Select JSON from the dropdown.
+8: Paste the following JSON into the text area:
 
 {
-  "username": "mytestuser",
-  "email": "mytest@example.com",
-  "password": "MyStrongPassword123!"
+  "username": "thunderuser",
+  "email": "thunder@example.com",
+  "password": "ThunderPassword123!"
 }
 
-
-Send Request: Click Send.
-
+You can change these values.
+Send Request: Click the Send button (green play icon).
 Expected Response:
-
 Status: 200 OK
-Body: "Registration successful!"
-Note: If you retry with the same username/email, you'll get 400 Bad Request as expected.
+Response Body: "Registration successful!"
+***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
