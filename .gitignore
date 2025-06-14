@@ -1,0 +1,12 @@
+# Sensitive configuration files
+appsettings.Development.json
+
+# Exclude Visual Studio Code settings (optional, but common)
+.vscode/
+
+# Standard .NET build output and intermediate files (usually already present)
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio / VS Code related files
+.vs/
