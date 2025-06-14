@@ -4,12 +4,12 @@
 
 This project delivers a secure and robust Backend API built on ASP.NET Core Web API, designed to serve as the foundational authentication and authorization layer for modern applications. It meticulously handles critical user security processes, enabling clients to:
 1: Register new user accounts with encrypted credentials.
-2:Authenticate and log in, receiving a secure JSON Web Token (JWT) for subsequent interactions.
-3:Access protected resources by presenting a valid JWT, ensuring only authenticated users can interact with sensitive API endpoints.
+2: Authenticate and log in, receiving a secure JSON Web Token (JWT) for subsequent interactions.
+3: Access protected resources by presenting a valid JWT, ensuring only authenticated users can interact with sensitive API endpoints.
 
-The architecture emphasizes **stateless authentication **through JWTs, employs BCrypt for industry-standard password hashing, and integrates seamlessly with MS SQL Server for reliable data persistence via Entity Framework Core. Adhering to best practices, the API includes secure configuration management and clear, interactive documentation via Swagger UI, facilitating easy development and testing.
+The architecture emphasizes stateless authentication through JWTs, employs BCrypt for industry-standard password hashing, and integrates seamlessly with MS SQL Server for reliable data persistence via Entity Framework Core. Adhering to best practices, the API includes secure configuration management and clear, interactive documentation via Swagger UI, facilitating easy development and testing.
 
-Key Features
+## Key Features
 🔐 Secure User Registration: Implements a robust registration process that includes password hashing with unique salts (using BCrypt) to protect user credentials against common attack vectors like rainbow tables and brute-force attempts.
 
 🔑 JWT-Based Authentication: Provides a streamlined login mechanism where successful authentication results in the issuance of a short-lived JSON Web Token, used by clients to establish authenticated sessions without relying on server-side session state.
@@ -24,19 +24,19 @@ Key Features
 
 📄 Interactive API Documentation: Integrates Swagger UI to provide a live, interactive documentation portal for all API endpoints, significantly aiding developers in understanding, testing, and integrating with the API during development.
 
-Technologies Used
-Backend Framework: ASP.NET Core 8.0 Web API (compatible with .NET SDK 8.0+)
+## Technologies Used
+1: Backend Framework: ASP.NET Core 8.0 Web API (compatible with .NET SDK 8.0+)
 
-Database: MS SQL Server 2022
+2: Database: MS SQL Server 2022
 
-ORM (Object-Relational Mapper): Entity Framework Core 8.0+
+2: ORM (Object-Relational Mapper): Entity Framework Core 8.0+
 
-Password Hashing Library: BCrypt.Net-Next
+3: Password Hashing Library: BCrypt.Net-Next
 
-Authentication & Authorization Standard: JSON Web Tokens (JWT)
+4: Authentication & Authorization Standard: JSON Web Tokens (JWT)
 
-API Documentation Tool: Swashbuckle.AspNetCore (for Swagger UI generation)
+5: API Documentation Tool: Swashbuckle.AspNetCore (for Swagger UI generation)
 
-Development Environment: Visual Studio Code 2022
+6: Development Environment: Visual Studio Code 2022
 
-API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia
+7: API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia
