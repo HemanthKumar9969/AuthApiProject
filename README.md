@@ -58,42 +58,6 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 
 5: Thunder Client: VS Code Extension for API testing.
 
-## Setup Instructions
-
-# Clone the Repository:
-
-git clone https://github.com/HemanthKumar9969/AuthApiProject.git
-
-cd AuthApiProject/AuthApi
-
-## Restore NuGet Packages:
-
-dotnet restore
-
-## Configure appsettings.Development.json:
-
-1: Create a new file named appsettings.Development.json inside the AuthApi folder (next to appsettings.json).
-
-2: Add your actual SQL Server credentials and a newly generated, strong JWT secret key to this file.
-
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=NALADALA\\SQLEXPRESS;Database=AuthDb;User Id=sa;Password=9969;TrustServerCertificate=True;"
-  },
-  "JwtSettings": {
-    "Secret": "YOUR_UNIQUE_AND_STRONG_JWT_SECRET_KEY_HERE_MIN_32_BYTES_LONG",
-    "Issuer": "https://yourdomain.com",  // Update to your API's actual domain
-    "Audience": "https://yourclientapp.com" // Update to your client application's actual domain
-  }
-}
-
-(To generate a strong JWT secret, you can use a temporary C# console app with System.Security.Cryptography.RNGCryptoServiceProvider and Convert.ToBase64String.)
-
-## Database Migrations:
-
-dotnet ef database update
-
-This command will create the AuthDb database and Users table in your SQL Server instance.
 
 ## Running the Application:
 
@@ -101,6 +65,6 @@ This command will create the AuthDb database and Users table in your SQL Server 
 
 2: Run the application:
 
-dotnet run
+## dotnet run 
 
 3: Your browser should automatically open to http://localhost:5285/swagger, which is the Swagger UI for testing.
