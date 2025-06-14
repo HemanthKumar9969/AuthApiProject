@@ -59,29 +59,18 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 5: Thunder Client: VS Code Extension for API testing.
 
 ## Getting Started
+Follow these steps to set up and run the project locally.
 
-### Prerequisites
+## Prerequisites
+Ensure the following tools are installed:
 
-## .NET SDK (8.0+):
-## Visual Studio Code: With the C# extension.
-## MS SQL Server 2022: (or compatible version) running locally.
-## SQL Server Management Studio (SSMS) or Azure Data Studio: For database management.
-## Thunder Client: VS Code Extension for API testing.
+1:.NET SDK 8.0+
 
-## Setup Instructions Below:
+2: Visual Studio Code with the C# Extension
 
-## Clone the Repository:
-git clone https://github.com/HemanthKumar9969/AuthApiProject.git
-cd AuthApiProject/AuthApi
-## Restore NuGet Packages:
-dotnet restore
-## Configure appsettings.Development.json:
-Create a new file named appsettings.Development.json inside the AuthApi folder (next to appsettings.json).
-Add your actual SQL Server credentials and a newly generated, strong JWT secret key to this file.
-## Database Migrations:
-dotnet ef database update
-This command will create the AuthDb database and Users table in your SQL Server instance.
-## Running the Application:
-In your terminal, navigate to the AuthApi project folder (AuthApiProject/AuthApi).
-## Run the application:
-dotnet run
+3: Microsoft SQL Server 2022 or compatible version
+
+4: SQL Server Management Studio (SSMS) or Azure Data Studio
+
+5: Thunder Client (VS Code extension for testing APIs)
+
