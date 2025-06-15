@@ -120,7 +120,12 @@ Value: application/json
 
 5: Body Tab:
 Select JSON from the dropdown.
-![Screenshot (202)](https://github.com/user-attachments/assets/77d714f9-1797-47fc-872c-b43d99e955ef)
+Paste the login credentials:
+### {
+  ### "username": "Vishal",
+  ### "email": "VishalAxisBank@gmail.com",
+  ### "password": "vishal12340!!@@"
+### }
 
 You can change these values.
 
@@ -157,10 +162,12 @@ Value: application/json
 Body Tab:
 
 Select JSON from the dropdown.
-
 Paste the login credentials using the user you just registered:
-
-![Screenshot (202)](https://github.com/user-attachments/assets/77d714f9-1797-47fc-872c-b43d99e955ef)
+### {
+  ### "username": "Vishal",
+  ### "email": "VishalAxisBank@gmail.com",
+  ### "password": "vishal12340!!@@"
+### }
 
 Send Request: Click the Send button.
 
