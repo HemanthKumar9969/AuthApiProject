@@ -280,57 +280,50 @@ This 403 Forbidden status is the correct and desired outcome for this phase. It 
 ![Animation](https://github.com/user-attachments/assets/0996e8a6-766f-4b6d-b351-35882f29ef61)
 
 
-Transition: Elevating User Role in MS SQL Server
+## Transition: Elevating User Role in MS SQL Server
 Before proceeding to Phase B, you must update the testuser's role in the database and obtain a new JWT that reflects this change.
 
-Open SQL Server Management Studio (SSMS).
+1: Open SQL Server Management Studio (SSMS).
 
-Connect to your SQL Server instance (e.g., NALADALA\SQLEXPRESS).
+2: Connect to your SQL Server instance (e.g., NALADALA\SQLEXPRESS).
 
-Open a New Query Window: Right-click on your AuthDb database, then select New Query.
+2: Open a New Query Window: Right-click on your AuthDb database, then select New Query.
 
-Execute the SQL Update Query:
+3: Execute the below SQL Query:
 
-USE AuthDb; -- Ensures you're working on the correct database
+**USE AuthDb; -- Ensures you're working on the correct database
 
 UPDATE [dbo].[Users]
 SET [Role] = 'Admin'
-WHERE [Username] = 'testuser'; -- IMPORTANT: Use the exact username you registered.
+WHERE [Username] = 'Vishal'; -- IMPORTANT: Use the exact username you registered.**
 
-Verify Success: In the "Messages" tab, confirm you see (1 row affected).
 
-Get a NEW JWT Token (Crucial Step):
+6: Verify Success: In the "Messages" tab, confirm you see (1 row affected).
 
-Go back to Thunder Client.
+7: Get a NEW JWT Token (Crucial Step):
 
-Re-run your Login Request (Test 2) for testuser.
+8: Go back to Thunder Client.
 
-Copy the newly generated JWT token from the response. This token will now include the updated Admin role claim. The old token is now stale for role-based checks.
+Re-run your Login Request (Test 2) for Vishal.
 
-Phase B: Successful Access (Using the 'Admin' Role Token)
+9: Copy the newly generated JWT token from the response. This token will now include the updated Admin role claim. The old token is now stale for role-based checks.
+
+## Phase B: Successful Access (Using the 'Admin' Role Token)
+
 Objective: To successfully access the /api/User/admin-data endpoint using the new JWT which now contains the "Admin" role.
 
-Thunder Client Setup:
-
+1: Thunder Client Setup:
 If you still have the request tab open from Phase A, use that. Otherwise, create a new request.
 
-Method: Select GET.
+2: Method: Select GET.
 
-URL: http://localhost:5285/api/User/admin-data
+3: URL: http://localhost:5285/api/User/admin-data
 
-Headers Tab:
+4: Headers Tab: Name: Authorization, Value: Bearer  (followed by a space and the NEW JWT token you just obtained after updating the role in SSMS).
 
-Name: Authorization
+5:Send Request: Click the Send button.
 
-Value: Bearer  (followed by a space and the NEW JWT token you just obtained after updating the role in SSMS).
-
-Send Request: Click the Send button.
-
-Expected Response (Phase B - Success):
-
-Status: 200 OK
-
-Response Body: "Hello, Admin testuser! This data is only accessible to users with the 'Admin' role."
+6:Expected Response (Phase B - Success): Status: 200 OK, Response Body: "Hello, Admin testuser! This data is only accessible to users with the 'Admin' role."
 
 This 200 OK status confirms that your API correctly grants access when the required Admin role is present in the JWT.
 
