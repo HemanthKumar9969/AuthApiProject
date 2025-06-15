@@ -130,10 +130,8 @@ Paste the login credentials:
 (You can change these values).
 
 6: Send Request: Click the Send button (green play icon).
-
-7: Expected Response: Status: 200 OK
-
-8: Response Body: "Registration successful!"
+Expected Response: Status: 200 OK
+Response Body: "Registration successful!"
 
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
 
@@ -152,10 +150,8 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 3: URL: Enter http://localhost:5285/api/Auth/login
 
 4: Headers Tab:
-
-5: Name: Content-Type
-
-6: Value: application/json
+Name: Content-Type
+Value: application/json
 
 7: Body Tab: Select JSON from the dropdown. Paste the login credentials using the user you just registered:
 {
@@ -165,10 +161,8 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 8: Send Request: Click the Send button.
 
 9: Expected Response:
-
-10: Status: 200 OK
-
-11: Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
+Status: 200 OK
+Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
 
 12: VERY IMPORTANT: Copy the entire token string (the very long string of characters) from the response body! You will use this token in all subsequent tests.
 
@@ -195,10 +189,8 @@ Crucially, ensure there is NO Authorization header present. If you previously ad
 6: Send Request: Click the Send button.
 
 7: Expected Response:
-
-8: Status: 401 Unauthorized
-
-9: Response Body: May be empty or contain a simple "Unauthorized" message.
+Status: 401 Unauthorized
+Response Body: May be empty or contain a simple "Unauthorized" message.
 
 This 401 Unauthorized status is the correct and desired outcome for this test. It confirms your API successfully blocks unauthenticated requests.
 
@@ -218,24 +210,43 @@ Objective: To successfully access the /api/User/profile endpoint by providing th
 
 4: Headers Tab:
 
-5: Add a new header:
-
-6: Name: Authorization
-
-7: Value: Type Bearer  (that's the word "Bearer", followed by a single space), then paste the entire JWT token you copied from Test 2.
-
-8: Example of full value: Bearer eyJhbGci...YOUR_TOKEN...
+5: Add a new header: 
+Name: Authorization 
+Value: Type Bearer  (that's the word "Bearer", followed by a single space), then paste the entire JWT token you copied from Test 2.
+Example of full value: Bearer eyJhbGci...YOUR_TOKEN...
 
 9: Body Tab: Ensure it is empty or set to None.
 
 10: Send Request: Click the Send button.
 
 11: Expected Response:
-
-12: Status: 200 OK
-
-13: Response Body: A JSON object showing the claims extracted from your token (e.g., userId, username, email, role).
+   Status: 200 OK
+   Response Body: A JSON object showing the claims extracted from your token (e.g., userId, username, email, role).
 
 ### Animated Screenshot: Authorized Access Success
 
 ![Animation](https://github.com/user-attachments/assets/9a7aeda8-2520-4da1-96f6-2c59b28a06a2)
+
+## Test 5: Accessing Role-Based Endpoint (User Role)
+
+Objective: To confirm that a user with the default "User" role can successfully access an endpoint (/api/User/user-data) specifically authorized for "User" roles. Your testuser should initially have the "User" role from registration.
+
+1: Create New Request: Click the + button.
+
+2: Method: Select GET.
+
+3: URL: Enter http://localhost:5285/api/User/user-data
+
+4: Headers Tab:
+Name: Authorization
+Value: Bearer  (followed by a space and the same JWT token you've been using from Test 2).
+
+5: Body Tab: Ensure it is empty or set to None.
+
+6: Send Request: Click the Send button.
+
+7: Expected Response:
+Status: 200 OK
+Response Body: "Hello, User testuser! This data is accessible to general users."
+
+### Animated Screenshot: User Role Access
