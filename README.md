@@ -132,7 +132,8 @@ You can change these values.
 
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
 
-### Animation Screenshot:
+### Below Check Animation Screenshot For Test 1: User Registration:
 
+![Animation](https://github.com/user-attachments/assets/adc97d47-62cd-4026-a377-5cb56d730eda)
 
 
