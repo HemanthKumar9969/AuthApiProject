@@ -145,40 +145,32 @@ Paste the login credentials:
 
 Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). This token is essential for accessing all protected endpoints in subsequent tests.
 
-Thunder Client Setup:
+1: Create New Request: Click the + button.
 
-Create New Request: Click the + button.
+2: Method: Select POST.
 
-Method: Select POST.
+3: URL: Enter http://localhost:5285/api/Auth/login
 
-URL: Enter http://localhost:5285/api/Auth/login
+4: Headers Tab:
 
-Headers Tab:
+5: Name: Content-Type
 
-Name: Content-Type
+6: Value: application/json
 
-Value: application/json
+7: Body Tab: Select JSON from the dropdown. Paste the login credentials using the user you just registered:
+{
+ "username": "Vishal",
+ "email": "VishalAxisBank@gmail.com",
+ "password": "vishal12340!!@@"
+}
+8: Send Request: Click the Send button.
 
-Body Tab:
+9: Expected Response:
 
-Select JSON from the dropdown.
-Paste the login credentials using the user you just registered:
-### {
-  ### "username": "Vishal",
-  ### "email": "VishalAxisBank@gmail.com",
-  ### "password": "vishal12340!!@@"
-### }
+10: Status: 200 OK
 
-Send Request: Click the Send button.
+11: Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
 
-Expected Response:
+12: VERY IMPORTANT: Copy the entire token string (the very long string of characters) from the response body! You will use this token in all subsequent tests.
 
-Status: 200 OK
-
-Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
-
-VERY IMPORTANT: Copy the entire token string (the very long string of characters) from the response body! You will use this token in all subsequent tests.
-
-Capture GIF: Capture the animated screenshot showing the login request and the 200 OK response with the JWT.
-
-Animated Screenshot: User Login & JWT Retrieval
+### Animated Screenshot: User Login & JWT Retrieval:
