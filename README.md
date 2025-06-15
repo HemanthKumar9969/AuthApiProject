@@ -121,13 +121,13 @@ Value: application/json
 5: Body Tab:
 Select JSON from the dropdown.
 Paste the login credentials:
-## {
-  ## "username": "Vishal",
-  ## "email": "VishalAxisBank@gmail.com",
-  ## "password": "vishal12340!!@@"
-## }
+{
+  "username": "Vishal",
+  "email": "VishalAxisBank@gmail.com",
+  "password": "vishal12340!!@@" 
+}
 
-You can change these values.
+(You can change these values).
 
 6: Send Request: Click the Send button (green play icon).
 
