@@ -118,11 +118,13 @@ Request Setup:
 
 5: Body Tab: Select JSON from the dropdown. Paste the login credentials:
 
-## {
-  ## "username": "Vishal",
-  ## "email": "VishalAxisBank@gmail.com",
-  ## "password": "vishal12340!!@@" 
-## }
+## JSON:
+
+{
+  "username": "Vishal",
+  "email": "VishalAxisBank@gmail.com",
+  "password": "vishal12340!!@@" 
+ }
 
 (You can change these values).
 
@@ -150,11 +152,13 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 
 7: Body Tab: Select JSON from the dropdown. Paste the login credentials using the user you just registered:
 
-## {
- ## "usernameOrEmail": "Vishal",
- ## "password": "vishal12340!!@@"
-## }
+## JSON:
 
+{
+  "username": "Vishal",
+  "password": "vishal12340!!@@" 
+ }
+ 
 8: Send Request: Click the Send button.
 
 9: Expected Response:
