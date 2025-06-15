@@ -176,3 +176,33 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 
 ![Animation](https://github.com/user-attachments/assets/192eada1-feb6-44aa-881d-bdda9ea5303b)
 
+## Test 3: Accessing Protected Endpoint (Unauthorized Attempt)
+
+Objective: To verify that the /api/User/profile endpoint, which is secured by the [Authorize] attribute, correctly responds with an "Unauthorized" status when no JWT is provided. This demonstrates your API's basic protection mechanism.
+
+1: Create New Request: Click the + button.
+
+2: Method: Select GET.
+
+3: URL: Enter http://localhost:5285/api/User/profile
+
+4: Headers Tab:
+
+Crucially, ensure there is NO Authorization header present. If you previously added one, uncheck its checkbox on the left side or delete it. Default headers like User-Agent are fine.
+
+5: Body Tab: Ensure it is empty or set to None.
+
+6: Send Request: Click the Send button.
+
+7: Expected Response:
+
+8: Status: 401 Unauthorized
+
+9: Response Body: May be empty or contain a simple "Unauthorized" message.
+
+This 401 Unauthorized status is the correct and desired outcome for this test. It confirms your API successfully blocks unauthenticated requests.
+
+### Animated Screenshot: Unauthorized Access Attempt
+
+![Animation](https://github.com/user-attachments/assets/37bb8a0e-aa39-460c-8dfb-4c88bc222487)
+
