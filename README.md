@@ -49,17 +49,7 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 ### Getting Started: Setting Up Your Local Environment
 To get this API running on your local machine, please follow these steps carefully.
 
-1. Prerequisites:
-
-Before you begin, ensure you have the following software installed on your system:
-
-.NET SDK (8.0+ recommended): This includes the .NET runtime and development tools.
-MS SQL Server 2022: Your database management system. Ensure your instance is running and accessible (e.g., NALADALA\SQLEXPRESS).
-SQL Server Management Studio (SSMS) or Azure Data Studio: For managing your SQL Server databases (optional, but recommended for debugging).
-Visual Studio Code: With the C# extension (from Microsoft).
-Git: For cloning the repository and version control.
-
-2. Clone the Repository:
+1. Clone the Repository:
 
 Open your preferred terminal or command prompt (e.g., Git Bash, PowerShell, VS Code integrated terminal) and execute the following commands to clone the project:
 
@@ -69,7 +59,7 @@ git clone https://github.com/HemanthKumar9969/AuthApiProject.git
 Navigate into the main project directory
 cd AuthApiProject/AuthApi
 
-3. Restore NuGet Packages:
+2. Restore NuGet Packages:
 
 This command downloads all the necessary third-party libraries (NuGet packages) that your project depends on.
 
@@ -77,7 +67,7 @@ dotnet restore
 
 (This often runs automatically with dotnet build or dotnet run, but it's good practice to run it explicitly after cloning.)
 
-5. Apply Database Migrations:
+3. Apply Database Migrations:
 
 This step uses Entity Framework Core to create or update your SQL Server database schema based on the project's models.
 
@@ -89,13 +79,13 @@ dotnet ef database update
 
 Upon successful execution, the AuthDb database and the Users table (along with EF Core's migration history table) will be created in your SQL Server instance. You can verify this using SSMS.
 
-6. Run the Application:
+4. Run the Application:
 
 Now, you can start the API server.
 
 dotnet run
 
-7: Terminal Output: You should see output indicating that the application has started and is listening on a specific URL, typically http://localhost:5285.
+5: Terminal Output: You should see output indicating that the application has started and is listening on a specific URL, typically http://localhost:5285.
 
 Browser Launch: Your default web browser should automatically open to the Swagger UI page.
 
