@@ -104,8 +104,6 @@ The API will be available at:
 
 https://localhost:5001/swagger
 
-![Screenshot (198)](https://github.com/user-attachments/assets/0530b149-0036-4bcf-8a35-208b58334475)
-
 ## API Endpoints and Testing:
 ### Testing the API with Thunder Client (Step-by-Step)
 
@@ -130,7 +128,7 @@ Value: application/json
 5: Body Tab:
 Select JSON from the dropdown.
 
-![Screenshot (200)](https://github.com/user-attachments/assets/dd247761-27f8-427d-b09a-8a3a271b6399)
+
 
 
 You can change these values.
@@ -146,5 +144,5 @@ Response Body: "Registration successful!"
 
 ## Animation Screenshot:
 
-![Animation](https://github.com/user-attachments/assets/fa431482-68d1-4abe-abd6-8578677c327d)
+
 
