@@ -250,3 +250,5 @@ Status: 200 OK
 Response Body: "Hello, User testuser! This data is accessible to general users."
 
 ### Animated Screenshot: User Role Access
+
+![Animation](https://github.com/user-attachments/assets/7b3590ba-6c04-489d-a8cd-c9853b0528b1)
