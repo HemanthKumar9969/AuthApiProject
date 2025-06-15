@@ -46,56 +46,62 @@ Built with Entity Framework Core and MS SQL Server, it ensures robust data persi
 
 7: API Testing Tool: Thunder Client (VS Code Extension), compatible with Postman/Insomnia
 
-## Prerequisites: 
+### Getting Started: Setting Up Your Local Environment
+To get this API running on your local machine, please follow these steps carefully.
 
-1: .NET SDK (8.0+): Download here
+1. Prerequisites:
 
-2: Visual Studio Code: With the C# extension (from Microsoft).
+Before you begin, ensure you have the following software installed on your system:
 
-3: MS SQL Server 2022: (or compatible version) running locally.
+## .NET SDK (8.0+ recommended): This includes the .NET runtime and development tools.
+## MS SQL Server 2022: Your database management system. Ensure your instance is running and accessible (e.g., NALADALA\SQLEXPRESS).
+## SQL Server Management Studio (SSMS) or Azure Data Studio: For managing your SQL Server databases (optional, but recommended for debugging).
+## Visual Studio Code: With the C# extension (from Microsoft).
+## Git: For cloning the repository and version control.
 
-4: SQL Server Management Studio (SSMS) or Azure Data Studio: For database management.
+2. Clone the Repository:
 
-5: Thunder Client: VS Code Extension for API testing.
+Open your preferred terminal or command prompt (e.g., Git Bash, PowerShell, VS Code integrated terminal) and execute the following commands to clone the project:
 
-## Getting Started
-Follow these steps to set up and run the project locally.
-
-## Prerequisites
-Ensure the following tools are installed:
-
-1:.NET SDK 8.0+
-
-2: Visual Studio Code with the C# Extension
-
-3: Microsoft SQL Server 2022 or compatible version
-
-4: SQL Server Management Studio (SSMS) or Azure Data Studio
-
-5: Thunder Client (VS Code extension for testing APIs)
-
-## Setup Instructions
-1: Clone the Repository:
-
+# Clone the repository from GitHub
 git clone https://github.com/HemanthKumar9969/AuthApiProject.git
 
+# Navigate into the main project directory
 cd AuthApiProject/AuthApi
 
-2: Restore NuGet Packages:
+3. Restore NuGet Packages:
+
+This command downloads all the necessary third-party libraries (NuGet packages) that your project depends on.
 
 dotnet restore
 
-3: Apply Database Migrations:
+(This often runs automatically with dotnet build or dotnet run, but it's good practice to run it explicitly after cloning.)
 
+5. Apply Database Migrations:
+
+This step uses Entity Framework Core to create or update your SQL Server database schema based on the project's models.
+
+# Build the project first to ensure migrations can be found
+dotnet build
+
+# Apply the migrations to create the database and tables
 dotnet ef database update
 
-4: Run the Application: 
+Upon successful execution, the AuthDb database and the Users table (along with EF Core's migration history table) will be created in your SQL Server instance. You can verify this using SSMS.
+
+6. Run the Application:
+
+Now, you can start the API server.
 
 dotnet run
 
-The API will be available at:
+7: Terminal Output: You should see output indicating that the application has started and is listening on a specific URL, typically http://localhost:5285.
 
-https://localhost:5001/swagger
+Browser Launch: Your default web browser should automatically open to the Swagger UI page.
+
+The API will be available at: http://localhost:5285
+
+Swagger UI (API Documentation & Testing Interface): http://localhost:5285/swagger
 
 ## API Endpoints and Testing:
 ### Testing the API with Thunder Client (Step-by-Step)
