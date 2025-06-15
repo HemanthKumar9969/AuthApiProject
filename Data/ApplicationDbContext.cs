@@ -13,7 +13,7 @@ namespace AuthApi.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure unique constraint for Username and Email to prevent duplicates
+            
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Username)
                 .IsUnique();
@@ -22,8 +22,6 @@ namespace AuthApi.Data
                 .HasIndex(u => u.Email)
                 .IsUnique();
 
-            // You could add initial data (seeding) here if desired,
-            // but for this project, we'll rely on registration.
         }
     }
 }
