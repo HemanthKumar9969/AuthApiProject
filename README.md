@@ -128,9 +128,7 @@ JSON:
 
 (You can change these values).
 
-6: Send Request: Click the Send button (green play icon).
-Expected Response: Status: 200 OK
-Response Body: "Registration successful!"
+6: Send Request: Click the Send button (green play icon). Expected Response: Status: 200 OK, Response Body: "Registration successful!"
 
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
 
@@ -161,9 +159,7 @@ JSON:
  
 8: Send Request: Click the Send button.
 
-9: Expected Response:
-Status: 200 OK
-Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
+9: Expected Response: Status: 200 OK, Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
 
 12: VERY IMPORTANT: Copy the entire token string (the very long string of characters) from the response body! You will use this token in all subsequent tests.
 
@@ -189,9 +185,7 @@ Crucially, ensure there is NO Authorization header present. If you previously ad
 
 6: Send Request: Click the Send button.
 
-7: Expected Response:
-Status: 401 Unauthorized
-Response Body: May be empty or contain a simple "Unauthorized" message.
+7: Expected Response: Status: 401 Unauthorized, Response Body: May be empty or contain a simple "Unauthorized" message.
 
 This 401 Unauthorized status is the correct and desired outcome for this test. It confirms your API successfully blocks unauthenticated requests.
 
@@ -219,9 +213,7 @@ Example of full value: Bearer eyJhbGci...YOUR_TOKEN...
 
 10: Send Request: Click the Send button.
 
-11: Expected Response:
-   Status: 200 OK
-   Response Body: A JSON object showing the claims extracted from your token (e.g., userId, username, email, role).
+11: Expected Response: Status: 200 OK, Response Body: A JSON object showing the claims extracted from your token (e.g., userId, username, email, role).
 
 ### Animated Screenshot: Authorized Access Success
 
@@ -247,7 +239,7 @@ Value: Bearer  (followed by a space and the same JWT token you've been using fro
 
 7: Expected Response:
 Status: 200 OK
-Response Body: "Hello, User testuser! This data is accessible to general users."
+Response Body: "Hello, User Vishal! This data is accessible to general users."
 
 ### Animated Screenshot: User Role Access
 
@@ -308,6 +300,9 @@ Re-run your Login Request (Test 2) for Vishal.
 
 9: Copy the newly generated JWT token from the response. This token will now include the updated Admin role claim. The old token is now stale for role-based checks.
 
+![Animation](https://github.com/user-attachments/assets/7da5e229-374b-4f56-abcf-af29edfd7e23)
+
+
 ## Phase B: Successful Access (Using the 'Admin' Role Token)
 
 Objective: To successfully access the /api/User/admin-data endpoint using the new JWT which now contains the "Admin" role.
@@ -323,8 +318,10 @@ If you still have the request tab open from Phase A, use that. Otherwise, create
 
 5:Send Request: Click the Send button.
 
-6:Expected Response (Phase B - Success): Status: 200 OK, Response Body: "Hello, Admin testuser! This data is only accessible to users with the 'Admin' role."
+6:Expected Response (Phase B - Success): Status: 200 OK, Response Body: "Hello, Admin Vishal! This data is only accessible to users with the 'Admin' role."
 
 This 200 OK status confirms that your API correctly grants access when the required Admin role is present in the JWT.
 
 ### Animated Screenshot: Admin Role Success
+
+![Animation](https://github.com/user-attachments/assets/2dcfc1b2-9671-41be-85cd-428732968029)
