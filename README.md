@@ -124,16 +124,15 @@ Select JSON from the dropdown.
 
 You can change these values.
 
-Send Request: Click the Send button (green play icon).
+6: Send Request: Click the Send button (green play icon).
 
-Expected Response: Status: 200 OK
+7: Expected Response: Status: 200 OK
 
-Response Body: "Registration successful!"
+8: Response Body: "Registration successful!"
 
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
 
-
-## Animation Screenshot:
+### Animation Screenshot:
 
 
 
