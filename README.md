@@ -206,3 +206,36 @@ This 401 Unauthorized status is the correct and desired outcome for this test. I
 
 ![Animation](https://github.com/user-attachments/assets/37bb8a0e-aa39-460c-8dfb-4c88bc222487)
 
+## Test 4: Accessing Protected Endpoint (Authorized Attempt)
+
+Objective: To successfully access the /api/User/profile endpoint by providing the valid JWT obtained from Test 2. This confirms your API correctly validates the token and grants access.
+
+1: Create New Request: Click the + button.
+
+2: Method: Select GET.
+
+3: URL: Enter http://localhost:5285/api/User/profile
+
+4: Headers Tab:
+
+5: Add a new header:
+
+6: Name: Authorization
+
+7: Value: Type Bearer  (that's the word "Bearer", followed by a single space), then paste the entire JWT token you copied from Test 2.
+
+8: Example of full value: Bearer eyJhbGci...YOUR_TOKEN...
+
+9: Body Tab: Ensure it is empty or set to None.
+
+10: Send Request: Click the Send button.
+
+11: Expected Response:
+
+12: Status: 200 OK
+
+13: Response Body: A JSON object showing the claims extracted from your token (e.g., userId, username, email, role).
+
+### Animated Screenshot: Authorized Access Success
+
+![Animation](https://github.com/user-attachments/assets/9a7aeda8-2520-4da1-96f6-2c59b28a06a2)
