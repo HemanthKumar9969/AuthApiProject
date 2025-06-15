@@ -53,20 +53,20 @@ To get this API running on your local machine, please follow these steps careful
 
 Before you begin, ensure you have the following software installed on your system:
 
-## .NET SDK (8.0+ recommended): This includes the .NET runtime and development tools.
-## MS SQL Server 2022: Your database management system. Ensure your instance is running and accessible (e.g., NALADALA\SQLEXPRESS).
-## SQL Server Management Studio (SSMS) or Azure Data Studio: For managing your SQL Server databases (optional, but recommended for debugging).
-## Visual Studio Code: With the C# extension (from Microsoft).
-## Git: For cloning the repository and version control.
+.NET SDK (8.0+ recommended): This includes the .NET runtime and development tools.
+MS SQL Server 2022: Your database management system. Ensure your instance is running and accessible (e.g., NALADALA\SQLEXPRESS).
+SQL Server Management Studio (SSMS) or Azure Data Studio: For managing your SQL Server databases (optional, but recommended for debugging).
+Visual Studio Code: With the C# extension (from Microsoft).
+Git: For cloning the repository and version control.
 
 2. Clone the Repository:
 
 Open your preferred terminal or command prompt (e.g., Git Bash, PowerShell, VS Code integrated terminal) and execute the following commands to clone the project:
 
-# Clone the repository from GitHub
+Clone the repository from GitHub
 git clone https://github.com/HemanthKumar9969/AuthApiProject.git
 
-# Navigate into the main project directory
+Navigate into the main project directory
 cd AuthApiProject/AuthApi
 
 3. Restore NuGet Packages:
@@ -81,10 +81,10 @@ dotnet restore
 
 This step uses Entity Framework Core to create or update your SQL Server database schema based on the project's models.
 
-# Build the project first to ensure migrations can be found
+Build the project first to ensure migrations can be found
 dotnet build
 
-# Apply the migrations to create the database and tables
+Apply the migrations to create the database and tables
 dotnet ef database update
 
 Upon successful execution, the AuthDb database and the Users table (along with EF Core's migration history table) will be created in your SQL Server instance. You can verify this using SSMS.
