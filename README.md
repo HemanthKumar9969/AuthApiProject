@@ -85,18 +85,11 @@ cd AuthApiProject/AuthApi
 
 dotnet restore
 
-3: Configure appsettings.Development.json:
-
-Create a file named appsettings.Development.json in the AuthApi project folder (same location as appsettings.json).
-Add your configuration details:
-
-![image](https://github.com/user-attachments/assets/bbf3b563-7f7a-4977-a256-500bdb83a6f7)
-
-4️: Apply Database Migrations:
+3: Apply Database Migrations:
 
 dotnet ef database update
 
-5️: Run the Application: 
+4: Run the Application: 
 
 dotnet run
 
@@ -127,9 +120,7 @@ Value: application/json
 
 5: Body Tab:
 Select JSON from the dropdown.
-
-
-
+![Screenshot (202)](https://github.com/user-attachments/assets/77d714f9-1797-47fc-872c-b43d99e955ef)
 
 You can change these values.
 
