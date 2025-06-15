@@ -16,13 +16,13 @@ namespace AuthApi.Models
         public string Email { get; set; } = string.Empty;
 
         [Required]
-        public byte[] PasswordHash { get; set; } = new byte[0]; // Stores the hashed password as bytes
+        public byte[] PasswordHash { get; set; } = new byte[0]; 
 
         [Required]
-        public byte[] PasswordSalt { get; set; } = new byte[0];  // Stores the unique salt as bytes
+        public byte[] PasswordSalt { get; set; } = new byte[0];  
 
         [Required]
         [MaxLength(20)]
-        public string Role { get; set; } = "User"; // Default role is "User"
+        public string Role { get; set; } = "User"; 
     }
 }
