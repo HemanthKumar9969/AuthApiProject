@@ -114,18 +114,15 @@ Request Setup:
 
 3: Headers Tab:
 
-4: Add a new header:
-Name: Content-Type
-Value: application/json
+4: Add a new header: Name: Content-Type, Value: application/json
 
-5: Body Tab:
-Select JSON from the dropdown.
-Paste the login credentials:
-{
-  "username": "Vishal",
-  "email": "VishalAxisBank@gmail.com",
-  "password": "vishal12340!!@@" 
-}
+5: Body Tab: Select JSON from the dropdown. Paste the login credentials:
+
+## {
+  ## "username": "Vishal",
+  ## "email": "VishalAxisBank@gmail.com",
+  ## "password": "vishal12340!!@@" 
+## }
 
 (You can change these values).
 
@@ -149,15 +146,15 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 
 3: URL: Enter http://localhost:5285/api/Auth/login
 
-4: Headers Tab:
-Name: Content-Type
-Value: application/json
+4: Headers Tab: Name: Content-Type, Value: application/json
 
 7: Body Tab: Select JSON from the dropdown. Paste the login credentials using the user you just registered:
-{
- "usernameOrEmail": "Vishal",
- "password": "vishal12340!!@@"
-}
+
+## {
+ ## "usernameOrEmail": "Vishal",
+ ## "password": "vishal12340!!@@"
+## }
+
 8: Send Request: Click the Send button.
 
 9: Expected Response:
@@ -210,9 +207,8 @@ Objective: To successfully access the /api/User/profile endpoint by providing th
 
 4: Headers Tab:
 
-5: Add a new header: 
-Name: Authorization 
-Value: Type Bearer  (that's the word "Bearer", followed by a single space), then paste the entire JWT token you copied from Test 2.
+5: Add a new header: Name: Authorization, Value: Type Bearer  (that's the word "Bearer", followed by a single space), then paste the entire JWT token you copied from Test 2.
+
 Example of full value: Bearer eyJhbGci...YOUR_TOKEN...
 
 9: Body Tab: Ensure it is empty or set to None.
