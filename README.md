@@ -137,7 +137,7 @@ Paste the login credentials:
 
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
 
-### Animated Screenshot: User Registration Success:
+### Animated Screenshot: User Registration Success
 
 ![Animation](https://github.com/user-attachments/assets/9a304a95-1600-4053-8658-34840ac2cfef)
 
@@ -159,8 +159,7 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 
 7: Body Tab: Select JSON from the dropdown. Paste the login credentials using the user you just registered:
 {
- "username": "Vishal",
- "email": "VishalAxisBank@gmail.com",
+ "usernameOrEmail": "Vishal",
  "password": "vishal12340!!@@"
 }
 8: Send Request: Click the Send button.
@@ -173,4 +172,7 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 
 12: VERY IMPORTANT: Copy the entire token string (the very long string of characters) from the response body! You will use this token in all subsequent tests.
 
-### Animated Screenshot: User Login & JWT Retrieval:
+### Animated Screenshot: User Login & JWT Retrieval
+
+![Animation](https://github.com/user-attachments/assets/192eada1-feb6-44aa-881d-bdda9ea5303b)
+
