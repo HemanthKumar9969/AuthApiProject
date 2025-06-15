@@ -121,11 +121,11 @@ Value: application/json
 5: Body Tab:
 Select JSON from the dropdown.
 Paste the login credentials:
-### {
-  ### "username": "Vishal",
-  ### "email": "VishalAxisBank@gmail.com",
-  ### "password": "vishal12340!!@@"
-### }
+## {
+  ## "username": "Vishal",
+  ## "email": "VishalAxisBank@gmail.com",
+  ## "password": "vishal12340!!@@"
+## }
 
 You can change these values.
 
