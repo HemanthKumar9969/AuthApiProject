@@ -118,7 +118,7 @@ Request Setup:
 
 5: Body Tab: Select JSON from the dropdown. Paste the login credentials:
 
-## JSON:
+JSON:
 
 {
   "username": "Vishal",
@@ -152,7 +152,7 @@ Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). 
 
 7: Body Tab: Select JSON from the dropdown. Paste the login credentials using the user you just registered:
 
-## JSON:
+JSON:
 
 {
   "username": "Vishal",
