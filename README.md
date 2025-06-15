@@ -132,8 +132,46 @@ You can change these values.
 
 ***Try sending this request again with the exact same username/email. You should get a 400 Bad Request with a message like "Username already exists." or "Email already exists."***
 
-### Below Check Animation Screenshot For Test 1: User Registration:
+### Animated Screenshot: User Registration Success:
 
-![Animation](https://github.com/user-attachments/assets/adc97d47-62cd-4026-a377-5cb56d730eda)
+![Animation](https://github.com/user-attachments/assets/9a304a95-1600-4053-8658-34840ac2cfef)
 
+## Test 2: User Login (Get JWT Token)
 
+Objective: To authenticate a registered user and obtain a JSON Web Token (JWT). This token is essential for accessing all protected endpoints in subsequent tests.
+
+Thunder Client Setup:
+
+Create New Request: Click the + button.
+
+Method: Select POST.
+
+URL: Enter http://localhost:5285/api/Auth/login
+
+Headers Tab:
+
+Name: Content-Type
+
+Value: application/json
+
+Body Tab:
+
+Select JSON from the dropdown.
+
+Paste the login credentials using the user you just registered:
+
+![Screenshot (202)](https://github.com/user-attachments/assets/77d714f9-1797-47fc-872c-b43d99e955ef)
+
+Send Request: Click the Send button.
+
+Expected Response:
+
+Status: 200 OK
+
+Response Body: A JSON object containing your JWT. It will look like {"token": "..."}.
+
+VERY IMPORTANT: Copy the entire token string (the very long string of characters) from the response body! You will use this token in all subsequent tests.
+
+Capture GIF: Capture the animated screenshot showing the login request and the 200 OK response with the JWT.
+
+Animated Screenshot: User Login & JWT Retrieval
