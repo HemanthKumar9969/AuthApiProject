@@ -221,7 +221,7 @@ Example of full value: Bearer eyJhbGci...YOUR_TOKEN...
 
 ## Test 5: Accessing Role-Based Endpoint (User Role)
 
-Objective: To confirm that a user with the default "User" role can successfully access an endpoint (/api/User/user-data) specifically authorized for "User" roles. Your testuser should initially have the "User" role from registration.
+Objective: To confirm that a user with the default "User" role can successfully access an endpoint (/api/User/user-data) specifically authorized for "User" roles. Your Vishal should initially have the "User" role from registration.
 
 1: Create New Request: Click the + button.
 
@@ -273,7 +273,7 @@ This 403 Forbidden status is the correct and desired outcome for this phase. It 
 
 
 ## Transition: Elevating User Role in MS SQL Server
-Before proceeding to Phase B, you must update the testuser's role in the database and obtain a new JWT that reflects this change.
+Before proceeding to Phase B, you must update the Vishal's role in the database and obtain a new JWT that reflects this change.
 
 1: Open SQL Server Management Studio (SSMS).
 
